@@ -132,7 +132,7 @@ public class CheckBoxController extends LabeledFieldController {
         Set<Object> modelValues = retrieveModelValues();
         checkbox.setChecked(
                 modelValues.contains(
-                        areValuesDefined() ? checkbox.getText() : index
+                        !areValuesDefined() ? checkbox.getText() : index
                 )
         );
     }
